@@ -1,0 +1,6 @@
+@PlayFolioShelfWebApi_HostAddress = http://localhost:5265
+
+GET {{PlayFolioShelfWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
