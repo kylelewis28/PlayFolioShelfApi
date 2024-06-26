@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFolioShelfWebApi", "PlayFolioShelfWebApi\PlayFolioShelfWebApi.csproj", "{D0C2F572-2D50-417D-AE7C-2824DF8AA4C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFolioShelf.Data", "PlayFolioShelf.Data\PlayFolioShelf.Data.csproj", "{1F4EB68C-97C8-4E6D-A23F-CD905113DBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFolioShelf.Models", "PlayFolioShelf.Models\PlayFolioShelf.Models.csproj", "{B30CEE5A-A4C9-44DE-8A9B-DD8F1ADA8988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFolioShelf.Services", "PlayFolioShelf.Services\PlayFolioShelf.Services.csproj", "{6D3A7F3D-93B6-45EC-B873-5BB790508C20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFolioShelfWebApi", "PlayFolioShelf.WebApi\PlayFolioShelfWebApi.csproj", "{6CCA9CBE-C1BA-4687-BE30-B5C395FA6F22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +24,21 @@ Global
 		{D0C2F572-2D50-417D-AE7C-2824DF8AA4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C2F572-2D50-417D-AE7C-2824DF8AA4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C2F572-2D50-417D-AE7C-2824DF8AA4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F4EB68C-97C8-4E6D-A23F-CD905113DBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F4EB68C-97C8-4E6D-A23F-CD905113DBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F4EB68C-97C8-4E6D-A23F-CD905113DBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F4EB68C-97C8-4E6D-A23F-CD905113DBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30CEE5A-A4C9-44DE-8A9B-DD8F1ADA8988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30CEE5A-A4C9-44DE-8A9B-DD8F1ADA8988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30CEE5A-A4C9-44DE-8A9B-DD8F1ADA8988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30CEE5A-A4C9-44DE-8A9B-DD8F1ADA8988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D3A7F3D-93B6-45EC-B873-5BB790508C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3A7F3D-93B6-45EC-B873-5BB790508C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3A7F3D-93B6-45EC-B873-5BB790508C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3A7F3D-93B6-45EC-B873-5BB790508C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCA9CBE-C1BA-4687-BE30-B5C395FA6F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCA9CBE-C1BA-4687-BE30-B5C395FA6F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCA9CBE-C1BA-4687-BE30-B5C395FA6F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCA9CBE-C1BA-4687-BE30-B5C395FA6F22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
