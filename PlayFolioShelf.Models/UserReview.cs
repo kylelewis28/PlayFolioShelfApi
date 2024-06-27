@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
 
-namespace PlayFolioShelf.Models.Models
+namespace PlayFolioShelf.Models
 {
     public class UserReview
     {

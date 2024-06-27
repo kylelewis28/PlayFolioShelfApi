@@ -1,10 +1,10 @@
 using PlayFolioShelf.Data;
-using PlayFolioShelf.Models.Models;
+using PlayFolioShelf.Models;
 using PlayFolioShelf.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PlayFolioShelf.Services.Services
+namespace PlayFolioShelf.Services
 {
     // the implementation of the user review related shit
 
