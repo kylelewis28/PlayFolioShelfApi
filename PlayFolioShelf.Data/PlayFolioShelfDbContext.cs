@@ -1,7 +1,7 @@
 using PlayFolioShelf.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace PlayfolioShelf.Data
+namespace PlayFolioShelf.Data
 {
     public class PlayFolioShelfContext : DbContext  // DbContext class for the PlayfolioShelf application
     {
