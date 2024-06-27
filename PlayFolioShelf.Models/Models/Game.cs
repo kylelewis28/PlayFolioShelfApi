@@ -10,6 +10,6 @@ public class Game
 
     public int MaturityId { get; set; }
 
-    public virtual List<UserReview> UserReviews {get ; set;} 
+    public virtual required List<UserReview> UserReviews {get ; set;} 
 
 }

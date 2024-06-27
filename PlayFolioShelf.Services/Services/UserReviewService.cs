@@ -1,5 +1,5 @@
 using PlayFolioShelf.Data;
-using PlayFolioShelf.Data.Entities;
+using PlayFolioShelf.Models.Models;
 using PlayFolioShelf.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;

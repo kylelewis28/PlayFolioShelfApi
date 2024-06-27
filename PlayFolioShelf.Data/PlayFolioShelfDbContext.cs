@@ -1,5 +1,6 @@
 using PlayFolioShelf.Data;
 using Microsoft.EntityFrameworkCore;
+using PlayFolioShelf.Models.Models;
 
 namespace PlayFolioShelf.Data
 {
