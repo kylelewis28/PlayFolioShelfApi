@@ -1,5 +1,7 @@
-namespace PlayFolioShelf.Services.Services;
-public interface IGameService
+namespace PlayFolioShelf.Services.Services
 {
-    
+    public interface IGameService
+    {
+        
+    }
 }
