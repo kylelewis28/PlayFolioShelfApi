@@ -2,40 +2,45 @@ using PlayFolioShelf.Data;
 using PlayFolioShelf.Services.Services;
 using PlayFolioShelf.Models;
 
-namespace PlayFolioShelf.Services.Services 
+namespace PlayFolioShelf.Services.Services
 {
     public class MaturityRatingService : IMaturityRatingService
     {
         private readonly PlayFolioShelfContext _context;
-
+        public MaturityRatingService(PlayFolioShelfContext context)
+        {
+            _context = context;
+        }
         public void CreateMaturityRating(MaturityRating maturityRating)
         {
-            throw new NotImplementedException();
+            _context.MaturityRating.Add(maturityRating);
+            _context.SaveChanges();
         }
 
         public void DeleteMaturityRating(MaturityRating maturityRating)
         {
-            throw new NotImplementedException();
+            var maturityRating = _context.MaturityRating.Find(id);
+            if (maturityRating != null)
+            {
+                _context.MaturityRating.Remove(maturityRating);
+                _context.SaveChanges();
+            }
         }
 
         public IEnumerable<MaturityRating> GetAllMaturityRating()
         {
-            throw new NotImplementedException();
+            return _context.MaturityRating.ToList();
         }
 
         public MaturityRating GetMaturityRatingById(int id)
         {
-            throw new NotImplementedException();
+            return _context.MaturityRating.Find(id);
         }
 
         public void UpdateMaturityRating(MaturityRating maturityRating)
         {
-            throw new NotImplementedException();
+            _context.MaturityRating.Update(maturityRating);
+            _context.SaveChanges();
         }
-    public MaturityRatingService(PlayFolioShelfContext context) 
-    {
-        _context = context; 
     }
-    } 
-
 }
