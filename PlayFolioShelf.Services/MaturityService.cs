@@ -1,46 +1,49 @@
 using PlayFolioShelf.Data;
-using PlayFolioShelf.Services.Services;
 using PlayFolioShelf.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PlayFolioShelf.Services.Services
 {
-    public class MaturityRatingService : IMaturityRatingService
+    public class MaturityService : IMaturityService
     {
         private readonly PlayFolioShelfContext _context;
-        public MaturityRatingService(PlayFolioShelfContext context)
+
+        public MaturityService(PlayFolioShelfContext context)
         {
             _context = context;
         }
-        public void CreateMaturityRating(MaturityRating maturityRating)
-        {
-            _context.MaturityRating.Add(maturityRating);
-            _context.SaveChanges();
-        }
 
-        public void DeleteMaturityRating(MaturityRating maturityRating)
+        public IEnumerable<MaturityRating> GetAllMaturityRatings()
         {
-            var maturityRating = _context.MaturityRating.Find(id);
-            if (maturityRating != null)
-            {
-                _context.MaturityRating.Remove(maturityRating);
-                _context.SaveChanges();
-            }
-        }
-
-        public IEnumerable<MaturityRating> GetAllMaturityRating()
-        {
-            return _context.MaturityRating.ToList();
+            return _context.MaturityRatings.ToList();
         }
 
         public MaturityRating GetMaturityRatingById(int id)
         {
-            return _context.MaturityRating.Find(id);
+            return _context.MaturityRatings.Find(id);
+        }
+
+        public void CreateMaturityRating(MaturityRating maturityRating)
+        {
+            _context.MaturityRatings.Add(maturityRating);
+            _context.SaveChanges();
         }
 
         public void UpdateMaturityRating(MaturityRating maturityRating)
         {
-            _context.MaturityRating.Update(maturityRating);
+            _context.MaturityRatings.Update(maturityRating);
             _context.SaveChanges();
+        }
+
+        public void DeleteMaturityRating(int id)
+        {
+            var maturityRating = _context.MaturityRatings.Find(id);
+            if (maturityRating != null)
+            {
+                _context.MaturityRatings.Remove(maturityRating);
+                _context.SaveChanges();
+            }
         }
     }
 }

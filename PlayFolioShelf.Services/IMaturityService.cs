@@ -2,7 +2,7 @@ using PlayFolioShelf.Models;
 
 namespace PlayFolioShelf.Services.Services 
 {
-    public interface IMaturityRatingService 
+    public interface IMaturityService 
     {
         IEnumerable<MaturityRating> GetAllMaturityRating(); 
 

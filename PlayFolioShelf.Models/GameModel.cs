@@ -1,12 +1,23 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace PlayFolioShelf.Models
 {
     public class Game
     {
         public int Id { get; set; }
-        public string Title { get; set; }
+        
+        [Required]
+        public string Title { get; set; } = string.Empty;
+        
+        [Required]
+        public string Genre { get; set; } = string.Empty;
+        
         public int MaturityRatingId { get; set; }
-        public string Genre { get; set; }
-        public MaturityRating MaturityRating { get; set; }
-        public List<UserReview> UserReviews { get; set; } = new List<UserReview>();
+        
+        [Required]
+        public MaturityRating MaturityRating { get; set; } = new MaturityRating();
+        
+        public virtual ICollection<UserReview> UserReviews { get; set; } = new List<UserReview>();
     }
 }
