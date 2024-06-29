@@ -2,6 +2,8 @@ using PlayFolioShelf.Data;
 using Microsoft.EntityFrameworkCore;
 using PlayFolioShelf.Models;
 using PlayFolioShelf.Data.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace PlayFolioShelf.Data
 {
