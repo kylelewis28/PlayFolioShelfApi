@@ -4,7 +4,7 @@ namespace PlayFolioShelf.Services.Services
 {
     public interface IMaturityService 
     {
-        IEnumerable<MaturityRating> GetAllMaturityRating(); 
+        IEnumerable<MaturityRating> GetAllMaturityRatings(); 
 
         MaturityRating GetMaturityRatingById(int id);
 
@@ -12,6 +12,6 @@ namespace PlayFolioShelf.Services.Services
 
         void UpdateMaturityRating(MaturityRating maturityRating);
 
-        void DeleteMaturityRating(MaturityRating maturityRating) ;
+        void DeleteMaturityRating(int id) ;
     }
 }
