@@ -33,3 +33,8 @@ namespace PlayFolioShelf.Data.Entities
         public virtual ICollection<UserReview> UserReviews { get; set; } = new List<UserReview>();
     }
 }
+
+
+
+
+
