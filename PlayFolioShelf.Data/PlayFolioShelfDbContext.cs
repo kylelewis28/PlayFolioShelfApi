@@ -1,10 +1,11 @@
 using PlayFolioShelf.Data;
 using Microsoft.EntityFrameworkCore;
 using PlayFolioShelf.Models;
+using PlayFolioShelf.Data.Entities;
 
 namespace PlayFolioShelf.Data
 {
-    public class PlayFolioShelfContext : DbContext  // DbContext class for the PlayfolioShelf application
+    public class PlayFolioShelfContext : DbContext  // DbContext class for the PlayFolioShelf application
     {
         public PlayFolioShelfContext(DbContextOptions<PlayFolioShelfContext> options) : base(options) { } // Constructor that takes DbContextOptions and passes it to the base DbContext class
 
