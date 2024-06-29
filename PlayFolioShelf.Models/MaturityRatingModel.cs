@@ -2,7 +2,7 @@ namespace PlayFolioShelf.Models
 {
     public class MaturityRating
     {
-        public int MaturityRatingId { get; set; }
+        public int Id { get; set; }
         public string? EsrbRating { get; set; }
         public string? Description { get; set; }
     }

@@ -12,6 +12,6 @@ namespace PlayFolioShelf.Services.Services
 
         void UpdateMaturityRating(MaturityRating maturityRating);
 
-        void DeleteMaturityRating(int id) ;
+        void DeleteMaturityRating(int id);
     }
 }
