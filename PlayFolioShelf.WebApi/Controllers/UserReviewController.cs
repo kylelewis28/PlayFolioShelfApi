@@ -37,7 +37,7 @@ namespace PlayFolioShelf.WebApi.Controllers
         public IActionResult CreateUserReview([FromBody] UserReview userReview)
         {
             _userReviewService.CreateUserReview(userReview);
-            return CreatedAtAction(nameof(GetUserReviewById), new { id = userReview.Id }, userReview);
+            return CreatedAtAction(nameof(GetUserReviewById), new { id = userReview.UserReviewId }, userReview);
         }
 
         // This method handles PUT requests and updates an existing user review.
@@ -45,7 +45,7 @@ namespace PlayFolioShelf.WebApi.Controllers
         public IActionResult UpdateUserReview(int id, [FromBody] UserReview userReview)
         {
             // If the ID in the URL does not match the ID in the request body, return a Bad Request response.
-            if (id != userReview.Id)
+            if (id != userReview.UserReviewId)
             {
                 return BadRequest();
             }

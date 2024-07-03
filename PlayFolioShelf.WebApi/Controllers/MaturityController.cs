@@ -37,7 +37,7 @@ namespace PlayFolioShelf.WebApi.Controllers
         public IActionResult CreateMaturityRating([FromBody] MaturityRating maturityRating)
         {
             _maturityService.CreateMaturityRating(maturityRating);
-            return CreatedAtAction(nameof(GetMaturityRatingById), new { id = maturityRating.Id }, maturityRating);
+            return CreatedAtAction(nameof(GetMaturityRatingById), new { id = maturityRating.MaturityRatingId }, maturityRating);
         }
 
         // This method responds to PUT requests and updates an existing maturity 
@@ -45,7 +45,7 @@ namespace PlayFolioShelf.WebApi.Controllers
         public IActionResult UpdateMaturityRating(int id, [FromBody] MaturityRating maturityRating)
         {
             // If the ID in the URL does not match the ID in the request body, return a Bad Request response
-            if (id != maturityRating.Id)
+            if (id != maturityRating.MaturityRatingId)
             {
                 return BadRequest();
             }

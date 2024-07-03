@@ -9,7 +9,7 @@ namespace PlayFolioShelf.Data.Entities
     public class UserReviewEntity
     {
         [Key]
-        public int Id { get; set; }
+        public int UserReviewId { get; set; }
 
         [Required]
         [ForeignKey(nameof(Game))]
