@@ -9,7 +9,7 @@ namespace PlayFolioShelf.Data.Entities
     public class MaturityRatingEntity
     {
         [Key]
-        public int Id { get; set; }
+        public int MaturityRatingId { get; set; }
 
         [MaxLength(10)]
         public string? EsrbRating { get; set; }

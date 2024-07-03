@@ -5,7 +5,7 @@ namespace PlayFolioShelf.Models
 {
     public class UserReview
     {
-        public int Id {get; set;}       //Primary key for UserReview
+        public int UserReviewId {get; set;}       //Primary key for UserReview
         public int GameId { get; set; }     //FK to Games table
         public string? UserId { get; set; }      //Identifier for user's review (username or something) also FK
         public double Rating { get; set; }      //Numerical rating
