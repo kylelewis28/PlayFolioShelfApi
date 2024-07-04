@@ -1,0 +1,18 @@
+Server=localhost,1433;Database=(NAME FOR DB HERE);User=sa;Password=(YOUR PW HERE);TrustServerCertificate=True
+
+//Get MVP working, then revisit models
+    //Models don't necessarily need all properties its entity counterpart does (i.e., don't need Id's in models/create models--but will want for a GET model.)
+        //In future, break models down within their own subdirectories: functionally speaking, in a real app, we'd want basically a 1:1 of models to respective methods
+            //EX: a "GameCreateModel" to go with the "CreateNewGame()" method in the services. (Use smart naming! Model=ModelType + Action + Model, Method= Action + EntityType)
+
+            EX:   
+                PlayFolioShelf.Models
+                |
+                |----GameModels
+                        |
+                        |
+                        |-GameCreateModel
+                        |
+                        |-GameUpdateModel
+                        |
+                        |-GameGetModel

@@ -1,17 +1,26 @@
-using PlayFolioShelf.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PlayFolioShelf.Models;
+using PlayFolioShelf.Data.Entities;
 
 namespace PlayFolioShelf.Data
 {
-    public class PlayFolioShelfContext : DbContext  // DbContext class for the PlayfolioShelf application
+    public class PlayFolioShelfContext : IdentityDbContext<UserEntity, IdentityRole<int>, int>
     {
-        public PlayFolioShelfContext(DbContextOptions<PlayFolioShelfContext> options) : base(options) { } // Constructor that takes DbContextOptions and passes it to the base DbContext class
+        public PlayFolioShelfContext(DbContextOptions<PlayFolioShelfContext> options)
+            : base(options) 
+        {
+        }
 
-        public DbSet<Game> Games { get; set; }                  // DbSet representing the Games table
-        public DbSet<UserReview> UserReviews { get; set; }   	 // DbSet representing the UserReviews table
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserEntity>().ToTable("Users");
+        }
 
+        public DbSet<Game> Games { get; set; }
+        public DbSet<UserReview> UserReviews { get; set; }
         public DbSet<MaturityRating> MaturityRatings { get; set; }
     }
 }
-
-

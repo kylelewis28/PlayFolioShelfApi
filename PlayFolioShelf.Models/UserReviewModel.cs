@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
 
-namespace PlayFolioShelf.Models.Models
+namespace PlayFolioShelf.Models
 {
     public class UserReview
     {
@@ -10,6 +10,6 @@ namespace PlayFolioShelf.Models.Models
         public string? UserId { get; set; }      //Identifier for user's review (username or something) also FK
         public double Rating { get; set; }      //Numerical rating
         public string? Review { get; set; }     //Written Review
-        public virtual Game Game { get; set; }      //Nav to related 'Game' entity (revisit after Game.cs)
+        public virtual required Game Game { get; set; }      //Nav to related 'Game' entity (revisit after Game.cs)
     }
 }
