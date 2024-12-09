@@ -1,9 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using PlayFolioShelf.Data;
+using PlayFolioShelf.Services; 
+using PlayFolioShelf.Models;
+using PlayFolioShelf.Services.Services;
+using PlayFolioShelf.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<PlayFolioShelfContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<IMaturityService, MaturityService>(); 
+builder.Services.AddScoped<IUserReviewService, UserReviewService>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -17,9 +29,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
